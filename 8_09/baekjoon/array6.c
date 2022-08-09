@@ -8,23 +8,25 @@ int main(){
     scanf("%d", &N);
 
     for(i = 0; i < N; i++){
-        scanf("%s", a[80]);
+        scanf("%s", a);
         
         l = strlen(a);
 
-        for(j = 0; j < l; l++){
-            if(a[l] == 'O'){
+        for(j = 0; j < l; j++){
+            if(a[j] == 'O'){
                 num++;
+                count += num;
             }
 
-            if(a[l] == 'X'){
+            if(a[j] == 'X'){
                 num = 0;
             }
-
-            count += num;
         }
 
         printf("%d\n", count);
+        
+        num = 0;
+        count = 0;
     }
     
     return 0;
