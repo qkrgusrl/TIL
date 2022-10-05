@@ -36,21 +36,36 @@
 
 //배열과 포인터의 차이점 찾기
 
-struct student {
-    int id;
-    char name[100];
-    double grade;
-};
+// struct student {
+    // int id;
+    // char name[100];
+    // double grade;
+// };
 
-void init_p(struct student *pst){
-    struct student st2 = {20, "Mom", 3.5};
-    *pst = st2;
-}
+// void init_p(struct student *pst){
+    // struct student st2 = {20, "Mom", 3.5};
+    // *pst = st2;
+// }
 
-int main(){
-    struct student st1 = {10, "Tom", 3.2};
-    init_p(&st1);
-    printf("%d, %s, %.2f\n", st1.id, st1.name, st1.grade);
+// int main(){
+    // struct student st1 = {10, "Tom", 3.2};
+    // init_p(&st1);
+    // printf("%d, %s, %.2f\n", st1.id, st1.name, st1.grade);
 
-    return 0;
+    // return 0;
+// }
+
+// struct list{
+    // int data;
+    // struct list *next;
+// }
+
+int mainm(){
+    struct list a1 = {10, NULL};
+    struct list a2 = {20, &a1};
+    struct list a3 = {30, NULL};
+
+    a1.data = 10;
+    a1.next = &a2;
+    *(*(a1.next)) = 50;
 }
